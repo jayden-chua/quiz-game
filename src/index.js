@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import './bootstrap.css';
 import AuthorQuiz from './AuthorQuiz';
+import AddAuthorForm from './components/AddAuthorForm';
 import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { shuffle, sample } from "underscore";
@@ -81,10 +82,6 @@ function onAnswerSelected(answer) {
 
 function App() {
     return (<AuthorQuiz {...state} onAnswerSelected={onAnswerSelected} />);
-}
-
-function AddAuthorForm() {
-    return (<div>Test</div>);
 }
 
 function render() {
