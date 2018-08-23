@@ -84,12 +84,16 @@ function App() {
     return (<AuthorQuiz {...state} onAnswerSelected={onAnswerSelected} />);
 }
 
+function AddAuthorFormWrapper() {
+    return (<AddAuthorForm onAddAuthor={console.log} />)
+}
+
 function render() {
     ReactDOM.render(
         <BrowserRouter>
             <React.Fragment>
                 <Route exact path="/" component={App}></Route>
-                <Route path="/add" component={AddAuthorForm}></Route> 
+                <Route path="/add" component={AddAuthorFormWrapper}></Route> 
             </React.Fragment>
         </BrowserRouter>, 
         document.getElementById('root')
